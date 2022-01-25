@@ -10,14 +10,10 @@ import java.util.UUID;
 @Component
 public class ApplicationIdentifierFilter implements Filter {
 
-    private String InstanceId;
+    private final String InstanceId = UUID.randomUUID().toString();
 
     public String GetInstanceId(){
         return InstanceId;
-    }
-
-    public ApplicationIdentifierFilter(){
-    InstanceId = UUID.randomUUID().toString();
     }
 
     @Override
